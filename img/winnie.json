@@ -1,0 +1,11 @@
+{
+    "name": "Winnie",
+    "description": "An adorable German Shepherd named Winnie!",
+    "image": "https://ipfs.io:/ipfs/QmNQiRTuUxv79TFL5HUhFHKHxuoWDuogUsKPmf86ggWzv3",
+    "attributes": [
+        {
+            "trait_type": "cuteness",
+            "value": 100
+        }
+    ]
+}
