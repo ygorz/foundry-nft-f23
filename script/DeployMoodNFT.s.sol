@@ -2,14 +2,21 @@
 
 pragma solidity ^0.8.18;
 
-import {Script} from "forge-std/Script.sol";
+import {Script, console} from "forge-std/Script.sol";
 import {MoodNFT} from "src/MoodNFT.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
 contract DeployMoodNFT is Script {
+    MoodNFT moodNFT;
+
     function run() external returns (MoodNFT) {
+        string memory sadSVG = vm.readFile("img/sad.svg");
+        string memory happySVG = vm.readFile("img/happy.svg");
+        console.log(sadSVG);
+        console.log(happySVG);
+
         vm.startBroadcast();
-        MoodNFT moodNFT = new MoodNFT(SAD_SVG_URI, HAPPY_SVG_URI);
+        moodNFT = new MoodNFT(svgToImageURI(sadSVG), svgToImageURI(happySVG));
         vm.stopBroadcast();
 
         return moodNFT;
