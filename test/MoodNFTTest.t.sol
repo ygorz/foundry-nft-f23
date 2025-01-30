@@ -5,7 +5,7 @@ pragma solidity ^0.8.18;
 import {Test, console} from "forge-std/Test.sol";
 import {MoodNFT} from "src/MoodNFT.sol";
 
-contract MoodNFTTests is Test {
+contract MoodNFTTest is Test {
     MoodNFT moodNFT;
 
     address USER = makeAddr("user");
